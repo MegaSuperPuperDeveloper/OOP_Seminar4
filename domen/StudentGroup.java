@@ -3,7 +3,7 @@ package domen;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGroup implements Iterable<Student>{
+public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>{
     private int idStudentGroup;
     private List<Student> studentList;
 
@@ -40,5 +40,10 @@ public class StudentGroup implements Iterable<Student>{
     @Override
     public Iterator<Student> iterator() {
         return new StudentIterator(studentList);
+    }
+
+    @Override
+    public int compareTo(StudentGroup o) {
+        return Integer.compare(this.getStudentList().size(), o.getStudentList().size());
     }
 }
