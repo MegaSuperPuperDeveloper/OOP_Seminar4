@@ -67,6 +67,7 @@ public class Main {
         studentGroupList2.add(studentGroup2);
         studentGroupList2.add(studentGroup3);
 
+        // Создание, сортировка и вывод потоков
         StudentSteam studentSteam1 = new StudentSteam(1, studentGroupList1);
         StudentSteam studentSteam2 = new StudentSteam(2, studentGroupList2);
         System.out.println("studentSteam1");
