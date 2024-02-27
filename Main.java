@@ -1,7 +1,5 @@
-import domen.Student;
-import domen.StudentGroup;
-import domen.StudentIterator;
-import domen.StudentSteam;
+import controllers.AccountController;
+import domen.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -82,7 +80,19 @@ public class Main {
             System.out.println(studentGroup);
         }
 
+        // Играемся с обобщениями
+        Employee worker = new Employee("Валера", 29, "Раб");
+        Teacher teacher = new Teacher("Ольга", 40, "Учитель");
 
+        AccountController.paySalary(teacher, 15000);
+        AccountController.paySalary(worker, 0);
+
+        // AccountController controller = new AccountController();
+        // controller.paySalary(teacher, 15000);
+        // controller.paySalary(worker, 0);
+
+        Student Vasya = new Student("Хитрый Вуася", 18);
+        // controller.paySalary(Vasya, 1000); Вуася хитрый ЛИКВИДИРОВАН! Он Person, а не WorkingPerson
 
     }
 }
