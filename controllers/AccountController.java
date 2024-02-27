@@ -1,7 +1,10 @@
 package controllers;
 
-public class AccountController<T, V> {
-    public void paySalary(T Person, V salary) {
-        System.out.println(Person.getName());
+import domen.Person;
+import domen.WorkingPerson;
+
+public class AccountController {
+    public static <T extends WorkingPerson, V> void paySalary(T person, V salary) {
+        System.out.println(person.getName() + " получил зарплату в сумме " + salary);
     }
 }
