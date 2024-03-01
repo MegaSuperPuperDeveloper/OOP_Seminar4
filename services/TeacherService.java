@@ -53,4 +53,9 @@ public class TeacherService implements iPersonService<Teacher> {
     public void setTeachers(List<Teacher> teachers) {
         this.teachers = teachers;
     }
+
+    public void sortTeacher() {
+        this.teachers.sort(new PersonComparator<Teacher>());
+    }
+
 }
