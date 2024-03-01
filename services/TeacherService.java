@@ -28,10 +28,8 @@ public class TeacherService implements iPersonService<Teacher> {
     }
 
     public void printAll() {
-
-        for (Teacher teacher : teachers) {
-            System.out.println(teacher);
-        }
+        sortTeacher();
+        System.out.println(this.teachers);
     }
 
     public void sortByFIO() {
