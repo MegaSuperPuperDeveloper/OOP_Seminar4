@@ -31,4 +31,19 @@ public class StudentService implements iPersonService<Student> {
         this.students.sort(new PersonComparator<Student>());
     }
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
 }
