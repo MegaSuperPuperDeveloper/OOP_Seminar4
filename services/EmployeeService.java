@@ -31,4 +31,19 @@ public class EmployeeService implements iPersonService<Employee> {
         this.employees.sort(new PersonComparator<Employee>());
     }
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 }
