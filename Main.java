@@ -1,11 +1,15 @@
 import controllers.AccountController;
 import domen.*;
+import services.TeacherService;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
 public class Main {
+
+    public static List<Person> students = new ArrayList<>();
+
     public static void main(String[] args) {
         List<Student> students1 = new ArrayList<>();
         Student student1 = new Student("Ivan", 20);
@@ -93,6 +97,26 @@ public class Main {
 
         Student Vasya = new Student("Хитрый Вуася", 18);
         // controller.paySalary(Vasya, 1000); Вуася хитрый ЛИКВИДИРОВАН! Он Person, а не WorkingPerson
+
+        // Список всех людей в универе
+        students.add(student1);
+        students.add(student2);
+        students.add(student3);
+        students.add(student4);
+        students.add(student5);
+        students.add(student6);
+        students.add(student7);
+        students.add(student8);
+        students.add(student9);
+        students.add(student10);
+        students.add(student11);
+        students.add(student12);
+        students.add(student13);
+        students.add(Vasya);
+        students.add(worker);
+        students.add(teacher);
+
+        AccountController.averageAge(students);
 
     }
 }

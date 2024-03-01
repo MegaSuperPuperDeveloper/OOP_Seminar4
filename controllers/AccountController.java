@@ -9,7 +9,7 @@ public class AccountController<T> {
         System.out.println(person.getName() + " получил зарплату в сумме " + salary);
     }
 
-    public static <T extends Person> double averageAge(List<T> person) {
+    public static <T extends Person> double averageAge(List<T> person) { // Функция создана для подсчета среднего возраста в универе
         double sum = 0;
         for (int i = 0; i < person.size(); i++) {
             sum += person.get(i).getAge();
